@@ -19,11 +19,11 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => {/* Fill me in */ }}>
+                Clicked: {this.props.count} times 
+                <button onClick={() => {this.props.increment}}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {decrement}}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -45,7 +45,7 @@ class Counter extends Component {
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { console.log(state);
     return {
         count: state.count
     };
